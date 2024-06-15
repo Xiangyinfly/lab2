@@ -26,7 +26,7 @@ public abstract class Coffee {
      * Returns the total price of the coffee including seasonings.
      * @return the total price of the coffee including seasonings
      */
-    public Double getTotalCost() {
+    public double getTotalCost() {
         double sum = seasonings.isEmpty() ? 0 : seasonings.stream().mapToDouble(Seasoning::getPrice).sum();
         return sum + getPrice();
     }
